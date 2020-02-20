@@ -1,5 +1,5 @@
 import React from 'react'
-import TopicPillsItem from "./TabPillsItemComponent";
+import TopicPillsItemComponent from "./TopicPillsItemComponent";
 import {createTopic, deleteTopic, findTopicsForLesson, updateTopic} from "../services/TopicService";
 import {
     createTopicAction,
@@ -28,12 +28,13 @@ class TopicPillsComponents extends React.Component {
                             {
                                 this.props.topics.map((topic) =>{
                                     return(
-                                    <TopicPillsItem key={topic.id}
-                                                    topic={topic}
-                                                    deleteTopic = {this.props.deleteTopic}
-                                                    updateTopic = {this.props.updateTopic}
-                                                    lessonId={this.props.lessonId}
-                                                    courseId={this.props.courseId}
+                                    <TopicPillsItemComponent key={topic._id}
+                                                             topic={topic}
+                                                             deleteTopic = {this.props.deleteTopic}
+                                                             updateTopic = {this.props.updateTopic}
+                                                             moduleId = {this.props.moduleId}
+                                                             lessonId={this.props.lessonId}
+                                                             courseId={this.props.courseId}
                                     />)
                                 }
                                 )
