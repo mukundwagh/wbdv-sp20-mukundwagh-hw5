@@ -1,6 +1,7 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
-export default class TopicPillsItem extends React.Component {
+export default class TopicPillsItemComponent extends React.Component {
 
     constructor(props) {
         super(props)
@@ -8,6 +9,14 @@ export default class TopicPillsItem extends React.Component {
 
     state = {
         active: false,
+        selectedTopic: false
+    }
+
+    clickTopic = () =>{
+        this.setState((prevState) => {
+            return {selectedTopic: !prevState.selectedTopic}
+        })
+
     }
 
     editTopic = () => {
@@ -35,7 +44,13 @@ export default class TopicPillsItem extends React.Component {
 
                         {
                             !this.state.active &&
-                            this.props.topic.title
+                            <Link to={`/courseeditor/courses/${this.props.courseId}/modules/
+                            ${this.props.moduleId}/lesson/${this.props.lessonId}/topic/${this.props.topic._id}`}
+                                  onClick={()=>this.clickTopic()}>
+                            <label style={{color: 'white'}}>
+                                {this.props.topic.title}
+                            </label>
+                            </Link>
                         }
                         {
                             !this.state.active &&
