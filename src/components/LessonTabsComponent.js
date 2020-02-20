@@ -37,7 +37,7 @@ class LessonTabsComponent extends React.Component {
                             <li className="nav-item">
 
                                     {
-                                        this.props.moduleId!=undefined &&
+                                        this.props.moduleId!==undefined &&
                                         <span className="nav-link btn-outline-primary" onClick={() =>
                                             this.props.createLesson(this.props.moduleId)}>
                                         <em className="fa fa-plus"

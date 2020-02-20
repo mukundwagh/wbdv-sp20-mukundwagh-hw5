@@ -145,10 +145,25 @@ class CourseManagerContainer extends Component {
                                <CourseEditorContainer
                                    {...props}
                                    props={props}
-                                   key={props.match.params.moduleId}
+                                   key={props.match.params.lessonId}
                                    courseId={props.match.params.courseId}
                                    moduleId={props.match.params.moduleId}
                                    lessonId={props.match.params.lessonId}
+                               />}>
+                    </Route>
+
+
+                    <Route path="/courseeditor/courses/:courseId/modules/:moduleId/lesson/:lessonId/topic/:topicId"
+                           exact={true}
+                           render={(props) =>
+                               <CourseEditorContainer
+                                   {...props}
+                                   props={props}
+                                   key={props.match.params.topicId}
+                                   courseId={props.match.params.courseId}
+                                   moduleId={props.match.params.moduleId}
+                                   lessonId={props.match.params.lessonId}
+                                   topicId={props.match.params.topicId}
                                />}>
                     </Route>
 
