@@ -1,5 +1,5 @@
-export const API_URL = "https://wbdv-generic-server.herokuapp.com/api/1111111111";
-
+export const API_URL = "https://wbdv-generic-server.herokuapp.com/api/001893314";
+export const WIDGET_API_URL= "https://cs5610-mukundwagh-hw5server.herokuapp.com/api/";
 
 export const COURSE_API_URL = `${API_URL}/courses`
 export const MODULES_API_URL = `${API_URL}/modules`
