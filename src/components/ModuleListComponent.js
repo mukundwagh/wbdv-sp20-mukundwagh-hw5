@@ -71,7 +71,7 @@ const dispatchToPropertyMapper = (dispatch) => {
                     dispatch(updateModuleAction(module._id,module))),
 
         createModule: (courseId) =>{
-            module = {title : "New Module"};
+            let module = {title : "New Module"};
             createModule(courseId, module)
                 .then(actualModule =>
                     dispatch(createModuleAction(actualModule)))
