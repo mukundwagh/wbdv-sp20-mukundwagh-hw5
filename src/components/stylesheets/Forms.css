@@ -32,15 +32,13 @@
 }
 
 .heading-widget-div {
-    margin: 3%;
+    margin: 1%;
     border: 1px solid gray;
 }
 
 .arrow-icon {
     display: inline-block;
-    font-size: 1.5em;
     color: #000000;
-    margin-left: 5px;
 }
 
 .widget-selector {
@@ -158,7 +156,7 @@ a.add-topic-icon:hover {
 
 .widget-div {
 
-    padding-right: 3%;
+    padding-right: 5%;
 
 }
 
@@ -183,7 +181,7 @@ a.add-topic-icon:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #2196F3;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -201,7 +199,7 @@ a.add-topic-icon:hover {
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #ccc;
 }
 
 input:focus + .slider {
@@ -224,4 +222,8 @@ input:checked + .slider:before {
 
 .switchToggle {
     margin-left: 100px;
+}
+
+.widget-content{
+    margin-right: 3%;
 }
