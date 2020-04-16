@@ -1,4 +1,6 @@
 import React from "react";
+import ParagraphWidget from "./ParagraphWidget";
+import HeadingWidget from "./HeadingWidget";
 
 export default class WidgetItemComponent extends React.Component {
 
@@ -194,14 +196,14 @@ export default class WidgetItemComponent extends React.Component {
           {
             this.state.widget.type === "Image" &&
             <div className="input-field-section">
-                    <input className="form-control form-control-elements"
-                              id="textarea" rows="3"
-                              placeholder="Image Url" style={{
-                      display: this.props.preview ? "none" : "inherit"
-                    }}
-                              onChange={this.changeSrc}
-                              value={this.state.widget.src}
-                    />
+              <input className="form-control form-control-elements"
+                     id="textarea" rows="3"
+                     placeholder="Image Url" style={{
+                display: this.props.preview ? "none" : "inherit"
+              }}
+                     onChange={this.changeSrc}
+                     value={this.state.widget.src}
+              />
               <input type="text-area"
                      className="form-control form-control-elements"
                      id="textarea-widget"
@@ -214,7 +216,8 @@ export default class WidgetItemComponent extends React.Component {
               <div style={{display: this.props.preview ? "inherit" : "none"}}>
                 <h5 className="form-control-elements">Preview </h5>
                 <div className="col-12">
-                  <img src={this.state.widget.src} className="myClass" style={{width : '300px', height : '150px'}} />
+                  <img src={this.state.widget.src} className="myClass"
+                       style={{width: '300px', height: '150px'}}/>
                 </div>
               </div>
             </div>

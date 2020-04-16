@@ -1,21 +1,16 @@
 import React from "react";
-import {
-  createWidget,
-  deleteWidget,
-  findWidgetsForTopic,
-  updateWidget
-} from "../services/WidgetService";
+import {Link} from "react-router-dom";
+import {createWidget, deleteWidget, findWidgetsForTopic, updateWidget} from "../services/WidgetService";
 import {connect} from "react-redux";
+import { v4 as uuidv4 } from 'uuid';
 import {
   createWidgetAction,
   deleteWidgetAction,
-  findWidgetsForTopicAction,
-  moveDownAction,
-  moveUpAction,
+  findWidgetsForTopicAction, moveDownAction, moveUpAction,
   updateWidgetAction
 } from "../actions/widgetActions";
 import WidgetItemComponent from "../components/WidgetItemComponent";
-
+import TopicPillsItemComponent from "../components/TopicPillsItemComponent";
 class WidgetListContainer extends React.Component {
 
   state = {

@@ -5,6 +5,8 @@ import ModuleList from "../components/ModuleListComponent"
 import TopicPillsComponents from "../components/TopicPillsComponents"
 import WidgetListComponent from "./WidgetListContainer"
 import LessonTabs from "../components/LessonTabsComponent"
+import Forms from "../components/Forms";
+import {findAllCourses} from "../services/CourseService";
 import {combineReducers, createStore} from "redux";
 import moduleReducer from "../reducers/moduleReducer";
 import lessonReducer from "../reducers/lessonReducer";
