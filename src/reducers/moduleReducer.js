@@ -1,4 +1,9 @@
-import {CREATE_MODULE, DELETE_MODULE,UPDATE_MODULE, FIND_MODULE_FOR_COURSE} from "../actions/moduleActions";
+import {
+  CREATE_MODULE,
+  DELETE_MODULE,
+  FIND_MODULE_FOR_COURSE,
+  UPDATE_MODULE
+} from "../actions/moduleActions";
 
 const initialState = {
     modules: []

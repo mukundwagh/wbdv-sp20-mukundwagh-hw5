@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {findCourseById} from "../services/CourseService";
 
-
 class CourseEditorNavBarComponent extends React.Component {
 
     constructor(props) {

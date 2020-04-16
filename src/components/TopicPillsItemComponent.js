@@ -44,7 +44,7 @@ export default class TopicPillsItemComponent extends React.Component {
 
                         {
                             !this.state.active && !this.state.selectedTopic &&
-                            <Link to={`/courseeditor/courses/${this.props.courseId}/modules/${this.props.moduleId}/lesson/${this.props.lessonId}/topic/${this.props.topic._id}`}
+                            <Link to={`/courseeditor/courses/${this.props.courseId}/modules/${this.props.moduleId}/lesson/${this.props.lessonId}/topic/${this.props.topic.id}`}
                                   onClick={()=>this.clickTopic()}>
                             <label style={{color: 'white'}}>
                                 {this.props.topic.title}
@@ -54,7 +54,7 @@ export default class TopicPillsItemComponent extends React.Component {
 
                         {
                             !this.state.active && this.state.selectedTopic &&
-                            <Link to={`/courseeditor/courses/${this.props.courseId}/modules/${this.props.moduleId}/lesson/${this.props.lessonId}/topic/${this.props.topic._id}`}
+                            <Link to={`/courseeditor/courses/${this.props.courseId}/modules/${this.props.moduleId}/lesson/${this.props.lessonId}/topic/${this.props.topic.id}`}
                                   onClick={()=>this.clickTopic()}>
                                 <label style={{color: 'red'}}>
                                     {this.props.topic.title}
@@ -76,7 +76,7 @@ export default class TopicPillsItemComponent extends React.Component {
                         {
 
                             !this.state.active &&
-                            <button onClick={()=>this.props.deleteTopic(this.props.topic._id)}  className="fa fa-trash p-1 float-right"></button>
+                            <button onClick={()=>this.props.deleteTopic(this.props.topic.id)}  className="fa fa-trash p-1 float-right"></button>
                         }
                         {
                             this.state.active &&

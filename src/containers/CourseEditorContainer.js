@@ -1,10 +1,9 @@
 import React from 'react'
-import CourseEditorNavBarComponent from "../components/CourseEditorNavBarComponent";
+import CourseEditorNavBarComponent
+  from "../components/CourseEditorNavBarComponent";
 import ModuleList from "../components/ModuleListComponent"
 import TopicPillsComponents from "../components/TopicPillsComponents"
 import WidgetListComponent from "./WidgetListContainer"
-import Forms from "../components/Forms";
-import {findAllCourses} from "../services/CourseService";
 import LessonTabs from "../components/LessonTabsComponent"
 import {combineReducers, createStore} from "redux";
 import moduleReducer from "../reducers/moduleReducer";

@@ -1,4 +1,12 @@
-import {CREATE_WIDGET, UPDATE_WIDGET, FIND_WIDGETS_FOR_TOPIC, DELETE_WIDGET, MOVE_UP, MOVE_DOWN} from '../actions/widgetActions'
+import {
+  CREATE_WIDGET,
+  DELETE_WIDGET,
+  FIND_WIDGETS_FOR_TOPIC,
+  MOVE_DOWN,
+  MOVE_UP,
+  UPDATE_WIDGET
+} from '../actions/widgetActions'
+
 const arrayMove = require('array-move');
 
 const initialState = {

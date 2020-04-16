@@ -1,7 +1,12 @@
 import React, {Component} from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import CourseGrid from '../components/CourseGrid'
-import {deleteCourse, findAllCourses, updateCourse, createCourse} from '../services/CourseService'
+import {
+  createCourse,
+  deleteCourse,
+  findAllCourses,
+  updateCourse
+} from '../services/CourseService'
 import CourseEditorContainer from './CourseEditorContainer'
 import CourseTable from '../components/CourseTable'
 import NavBarComponent from "../components/NavBarComponent";

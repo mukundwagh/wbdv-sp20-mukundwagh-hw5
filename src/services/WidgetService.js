@@ -14,14 +14,17 @@ export const findWidgetById = async (widgetId) => {
 
 
 export const findWidgetsForTopic = async (topicId) => {
+  if(topicId!==undefined) {
     const response = await fetch(`${WIDGET_API_URL}topics/${topicId}/widgets`, {
-        method: 'GET'
+      method: 'GET'
     });
     return await response.json()
+  }
 };
 
 
 export const createWidget = async (tid,widget) => {
+  if(tid!==undefined){
     let response = await fetch(`${WIDGET_API_URL}topics/${tid}/widgets`, {
         method: 'POST',
         body: JSON.stringify(widget),
@@ -30,6 +33,7 @@ export const createWidget = async (tid,widget) => {
         }
     });
     return await response.json()
+  }
 };
 
 export const deleteWidget = async (widgetId) => {

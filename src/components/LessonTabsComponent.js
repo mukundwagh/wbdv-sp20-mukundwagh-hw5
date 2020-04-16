@@ -1,8 +1,18 @@
 import React from 'react'
 import LessonListItemComponent from "./LessonListItemComponent";
-import {createLesson, deleteLesson, findLessonsForModule, updateLesson} from "../services/LessonService";
+import {
+  createLesson,
+  deleteLesson,
+  findLessonsForModule,
+  updateLesson
+} from "../services/LessonService";
 import {connect} from "react-redux";
-import {findAllLessonsForModuleAction,updateLessonAction,createLessonAction,deleteLessonAction} from "../actions/lessonActions";
+import {
+  createLessonAction,
+  deleteLessonAction,
+  findAllLessonsForModuleAction,
+  updateLessonAction
+} from "../actions/lessonActions";
 
 class LessonTabsComponent extends React.Component {
 

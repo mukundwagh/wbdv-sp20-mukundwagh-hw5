@@ -1,5 +1,10 @@
-import {CREATE_TOPIC, DELETE_TOPIC, FIND_TOPICS_FOR_LESSON, UPDATE_TOPIC} from "../actions/topicActions";
-import {UPDATE_LESSON} from "../actions/lessonActions";
+import {
+  CREATE_TOPIC,
+  DELETE_TOPIC,
+  FIND_TOPICS_FOR_LESSON,
+  UPDATE_TOPIC
+} from "../actions/topicActions";
+
 const initialState = {
     topics: []
 }
@@ -20,10 +25,10 @@ const topicReducer = (state = initialState, action) => {
             }
         case DELETE_TOPIC:
             return {
-                topics: state.topics.filter(topic => topic._id !== action.topicId)
+                topics: state.topics.filter(topic => topic.id !== action.topicId)
             }
         case UPDATE_TOPIC:
-            const updateTopicIndex = state.topics.findIndex(i => i._id === action.newTopicId)
+            const updateTopicIndex = state.topics.findIndex(i => i.id === action.newTopicId)
             state.topics.splice(updateTopicIndex, 1, action.newTopic)
             return {
                 topics: state.topics

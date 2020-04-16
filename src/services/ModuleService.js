@@ -1,5 +1,4 @@
-import {MODULES_API_URL, COURSES_MODULES_API_URL} from "../common/constants";
-
+import {COURSES_MODULES_API_URL, MODULES_API_URL} from "../common/constants";
 
 export const findModuleForCourse = (courseId) =>
     fetch(COURSES_MODULES_API_URL(courseId))

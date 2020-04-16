@@ -1,4 +1,9 @@
-import {CREATE_LESSON, DELETE_LESSON, FIND_LESSON_FOR_MODULE,UPDATE_LESSON} from "../actions/lessonActions";
+import {
+  CREATE_LESSON,
+  DELETE_LESSON,
+  FIND_LESSON_FOR_MODULE,
+  UPDATE_LESSON
+} from "../actions/lessonActions";
 
 const initialState = {
     lessons: []

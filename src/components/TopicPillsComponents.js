@@ -1,11 +1,16 @@
 import React from 'react'
 import TopicPillsItemComponent from "./TopicPillsItemComponent";
-import {createTopic, deleteTopic, findTopicsForLesson, updateTopic} from "../services/TopicService";
 import {
-    createTopicAction,
-    deleteTopicAction,
-    findAllTopicsForLessonAction,
-    updateTopicAction
+  createTopic,
+  deleteTopic,
+  findTopicsForLesson,
+  updateTopic
+} from "../services/TopicService";
+import {
+  createTopicAction,
+  deleteTopicAction,
+  findAllTopicsForLessonAction,
+  updateTopicAction
 } from "../actions/topicActions";
 import {connect} from "react-redux";
 
@@ -28,7 +33,7 @@ class TopicPillsComponents extends React.Component {
                             {
                                 this.props.topics.map((topic) =>{
                                     return(
-                                    <TopicPillsItemComponent key={topic._id}
+                                    <TopicPillsItemComponent key={topic.id}
                                                              topic={topic}
                                                              deleteTopic = {this.props.deleteTopic}
                                                              updateTopic = {this.props.updateTopic}
@@ -74,9 +79,9 @@ const dispatchToPropertyMapper = (dispatch) => {
                 dispatch(findAllTopicsForLessonAction(actualTopics))),
 
         updateTopic: (topic) =>
-            updateTopic(topic._id,topic)
+            updateTopic(topic.id,topic)
                 .then(status =>
-                    dispatch(updateTopicAction(topic._id,topic))),
+                    dispatch(updateTopicAction(topic.id,topic))),
 
         createTopic: (lessonId) =>{
             let actualTopic = {title : "New Topic"};
